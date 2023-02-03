@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator </title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    body {
+        background-color: royalblue;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    input {
+        margin: 20px;
+        padding: 15px 30px;
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0px 4px 23px -3px rgba(255, 145, 255, 1);
+
+    }
+
+    .container {
+        width: 500px;
+        margin: 30vh 30vw 0 35vw;
+        padding: 50px;
+        border-radius: 15px;
+        text-align: center;
+        background-color: aliceblue;
+    }
+
+    button {
+        margin: 20px 5px;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        background-color: blueviolet;
+        color: #fff;
+    }
+
+    .result {
+        width: 100%;
+        color: #fff;
+        margin-top: 20px;
+        font-size: 50px;
+        text-align: center;
+
+
+    }
+</style>
+
+<body>
+    <section class="container">
+        <form>
+            <input type="number" placeholder="Enter your 1st number" id="1stnum">
+            <br>
+            <input type="number" placeholder="Enter your 2nd number" id="2ndnum">
+            <br>
+            <button type="button" onclick="sum1()">+</button>
+            <button type="button" id="minus" onclick="minus1()">-</button>
+            <button type="button" id="multi" onclick="multi1()">x</button>
+            <button type="button" id="divi" onclick="division1()">÷</button>
+        </form>
+    </section>
+    <section class="result">
+        <h1>Result: <span id="result1"></span></h1>
+    </section>
+    <script>
+        function sum1() {
+            num1 = document.getElementById("1stnum").value;
+            num2 = document.getElementById("2ndnum").value;
+            x = Number(num1);
+            y = Number(num2);
+            document.getElementById("result1").innerHTML = x + y;
+
+        }
+        function division1() {
+            num3 = document.getElementById("1stnum").value;
+            num4 = document.getElementById("2ndnum").value;
+            document.getElementById("result1").innerHTML = num3 / num4;
+        }
+        function multi1() {
+            num3 = document.getElementById("1stnum").value;
+            num4 = document.getElementById("2ndnum").value;
+            document.getElementById("result1").innerHTML = num3 * num4;
+        }
+        function minus1() {
+            num3 = document.getElementById("1stnum").value;
+            num4 = document.getElementById("2ndnum").value;
+            document.getElementById("result1").innerHTML = num3 - num4;
+        }
+       /* if ("result1" > 9999) {
+            document.write("<h1> gyjkg");
+            alert("abck");
+        }
+        else {
+        }*/
+    </script>
+</body>
+
+</html>
